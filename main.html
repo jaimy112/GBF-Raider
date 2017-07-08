@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Find some raids</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<style type="text/css">
+		@font-face {
+			font-family: robotoRegular;
+			src: url(fonts/roboto/Roboto-Regular.woff);
+		}
+		*, *:before, *:after {
+    box-sizing: inherit;
+}
+:focus {
+    outline: none;
+}
+		h1, h2, h3, h4, p {
+			margin: 0;
+		}
+		a:active, a:hover {
+    outline: 0;
+}
+a {
+    text-decoration: none;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+		body {
+	    		margin: 0;
+	    		color: rgba(0,0,0,.74);
+	    		font-family: robotoRegular;
+	    		background: url(images/wallhaven-487429.jpg);
+	    		background-color: #EEEEEE;
+			    -o-background-size: 100% auto;
+			    -webkit-background-size: 100% auto;
+			    -moz-background-size: 100% auto;
+			    background-size: 100% auto;
+			    background-attachment: fixed;
+			    background-position: center;
+	    		
+		}
+		.container {
+			margin-top: 56px;
+		}
+		.btn, .btn-large {
+		    text-decoration: none;
+		    color: #fff;
+		    background-color: #2196F3;
+		    text-align: center;
+		    letter-spacing: .5px;
+		    transition: .2s ease-out;
+		    cursor: pointer;
+		}
+		.btn, .btn-large, .btn-floating, .btn-large, .btn-flat {
+		    font-size: 1rem;
+		    outline: 0;
+		}
+		.btn, .btn-large, .btn-flat {
+		    border: none;
+		    border-radius: 2px;
+		    display: inline-block;
+		    height: 36px;
+		    line-height: 36px;
+		    padding: 0 2rem;
+		    text-transform: uppercase;
+		    vertical-align: middle;
+		    -webkit-tap-highlight-color: transparent;
+		}
+		.btn, .btn-large, .btn-floating {
+		    	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+		}
+		.btn-flat {
+    box-shadow: none;
+    background-color: transparent;
+    color: #343434;
+    cursor: pointer;
+    transition: background-color .2s;
+}
+		.btn i {
+			font-size: 1.3rem;
+			line-height: inherit;
+		}
+		.btn:hover, .btn-large:hover {
+		    	background-color: #2bbbad;
+
+		}
+		.btn-flat:focus, .btn-flat:hover {
+		    	box-shadow: none;
+		}
+		.btn:hover, .btn-large:hover, .btn-floating:hover {
+    			box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+		}
+		.chip {
+    display: inline-block;
+    height: 32px;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(0,0,0,0.6);
+    line-height: 32px;
+    padding: 0 12px;
+    border-radius: 16px;
+    background-color: #e4e4e4;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+.chip>img {
+    float: left;
+    margin: 0 8px 0 -12px;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+}
+.chip .close {
+    cursor: pointer;
+    float: right;
+    font-size: 16px;
+    line-height: 32px;
+    padding-left: 8px;
+}
+img {
+    border: 0;
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+ width: 32px;
+    height: 14px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.38);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: -3px;
+    bottom: -3px;
+    background-color: #F1F1F1;
+    -webkit-transition: .4s;
+    transition: .4s;
+    box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12);
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(17px);
+  -ms-transform: translateX(17px);
+  transform: translateX(17px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* ==========  Select Field ========== */
+
+/* Style Select Field */
+select {
+  font-family: inherit;
+  background-color: transparent;
+  width: 100%;
+  padding: 8px 0;
+  color: rgba(0,0,0,.74);
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,.12);
+}
+
+/* Remove focus */
+select:focus {
+  outline: none}
+
+/* Hide label */
+.selectfield label {display: none;}
+/* Use custom arrow */
+.selectfield select {appearance: none}
+.selectfield {
+  font-family: 'Roboto','Helvetica','Arial',sans-serif;
+  position: relative;
+    &:after {
+        position: absolute;
+        top: 0.75em;
+        right: 0.5em;
+        /* Styling the down arrow */
+        width: 0;
+        height: 0;
+        padding: 0;
+        content: '';
+        border-left: .25em solid transparent;
+        border-right: .25em solid transparent;
+        border-top: .375em solid rgba(0,0,0,.12);
+        pointer-events: none;
+    }
+}
+		i.right {
+		    	float: right;
+		    	margin-left: 15px;
+		}
+		header {
+			position: relative;
+			box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+			display: flex;
+    			flex-wrap: nowrap;
+    			background-color: white;
+    			position: fixed;
+    			width: 100%;
+   			 z-index: 2;
+		}
+		header .settings {
+			margin-left: 8px;
+		}
+		header .settings:hover,
+		header .tools .search:hover,
+		header .tools .help:hover {
+			color: rgba(0,0,0,.87);
+			cursor: pointer;
+		}
+		header .settings i,
+		header .tools i {
+			font-size: 36px;
+		}
+		header .tools {
+			margin-left: auto;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		header .tools .connection {
+			color: #4CAF50;
+			margin-left: 8px;
+		}
+		header .tools .help {
+			margin-left: 8px;
+		}
+		header .tools .donate {
+			margin-left: 8px;
+			margin-right: 8px;
+		}
+		header .settings,
+		header .tools .search,
+		header .tools .connection,
+		header .tools .help,
+		header .tools .donate {
+			padding: 8px 16px;
+		}
+		header .tools .btn i {
+			font-size: 1.3rem;
+		}
+
+		main {
+			padding: 24px 96px ;
+		}
+		.card {
+			position: relative;
+			box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+			background-color: rgb(255,255,255);
+			padding: 24px 16px;
+			margin-bottom: 24px;
+			border-radius: 0px 0px 2px 2px;
+		}
+		.card .title {
+			margin-bottom: 8px;
+		}
+		.card .content {
+			width: 100%;
+		}
+		.error {
+			background-color: #D50000;
+			color: rgba(255,255,255,0.87);
+		}
+		i.error {
+			color: #D50000;
+			background: transparent;
+		}
+		.error .icon,
+		.error .message {
+			float: left;
+		}
+		.error .message {
+			margin-left: 8px;
+			margin-right: 24px;
+		}
+		.error .icon i {
+		    	font-size: 48px;
+		}
+		.card .dismiss {
+		    	position: absolute;
+		    	cursor: pointer;
+		    	top: 8px;
+		    	right: 8px;
+		}
+		.card.search .content input {
+			width: 100%;
+			font-size: 32px;
+			background-color: transparent;
+			border: none;
+			border-bottom: 1px solid #EEEEEE;
+    			box-shadow: 0 1px 0 0 #EEEEEE;
+		}
+		.card.search .content input:focus {
+			border-bottom: 1px solid #03A9F4;
+    			box-shadow: 0 1px 0 0 #03A9F4;
+		}
+		.card .title p{
+			font-size: 24px;
+			color: rgba(0,0,0,.87);
+		}
+		ul:not(.browser-default) {
+    padding-left: 0;
+    list-style-type: none;
+}
+ul:not(.browser-default) li {
+    list-style-type: none;
+}
+.tabs {
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 48px;
+    width: 100%;
+    background-color: transparent;
+    margin: 0 auto;
+    white-space: nowrap;
+    border-bottom: 1px solid rgba(0,0,0,.12);
+}
+.tabs-content {
+	padding: 16px 24px;
+}
+.tabs .tab {
+    display: inline-block;
+    text-align: center;
+    line-height: 48px;
+    height: 48px;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+}
+.tabs .tab a {
+    color: rgba(0,0,0,.61);
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0 24px;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: color .28s ease;
+}
+.tabs .tab a:hover, .tabs .tab a.active {
+    background-color: transparent;
+    color: #03A9F4;
+}
+.tabs .indicator {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: #03A9F4;
+    will-change: left, right;
+}
+.carousel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    -webkit-perspective: 500px;
+    perspective: 500px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+}
+.carousel .carousel-item {
+    display: none;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.card.settings .settings .setting {
+	border-bottom: 1px solid rgba(0,0,0,.12);
+	padding: 16px 0;
+}
+.card.settings .settings .setting:last-child {
+	border-bottom: none;
+}
+.card.settings .settings .setting span {
+    float: left;
+}
+.card.settings .footer {
+	border-top: 1px solid rgba(0,0,0,.12);
+	padding: 24px 16px;
+	display: flex;
+}
+.card.settings .footer .cancel {
+    margin-left: auto;
+}
+.card.settings .footer .save a {
+	color: #2196F3;
+}
+	.collection-table {
+		position: relative;
+	}
+	.card:after,
+	.card.settings .settings .setting:after,
+	.collection-table:after,
+	.collection-table-header:after,
+	.collection-table-items:after,
+	.collection-table-item:after,
+	.collection-table-item .item-data:after,
+	.toolbar:after   {
+  		content: "";
+  		display: table;
+  		clear: both;
+	}
+    	.collection-table .collection-table-header {
+    		    color: rgba(0,0,0,.61);
+		    font-weight: 600;
+		    float: left;
+		    position: relative;
+		    border-bottom: 1px solid rgba(0,0,0,.12);
+		    box-sizing: border-box;
+		    text-align: center;
+    	}
+    	.collection-table-items {
+	    	float: left;
+	    	position: relative;
+	    	width: 100%;
+	    	box-sizing: border-box;
+	}
+	.collection-table-items .collection-table-item:nth-child(even) {
+		background-color: #EEEEEE;
+	}
+    	.collection-table .header-name, .collection-table .item-name {
+    		max-width: 400px;
+    		min-width: 400px;
+    	}
+    	.collection-table-header,
+    	.collection-table-item {
+    		display: flex;
+    		flex-grow: 1;
+    		flex-wrap: wrap;
+    		width: 100%;
+    	}
+    	.collection-table-item {
+    		padding: 16px 24px;
+    		border-bottom: 1px solid rgba(0,0,0,.12);	
+    	}
+    	.collection-table-item:hover {
+    		background-color: rgba(0,0,0,.05);
+    		color: rgba(0,0,0,.87);
+    	}
+    	.item-name,
+    	.header-name {
+    		flex-grow: 1;
+    	}
+    	.collection-table-item:last-child {
+    		border-bottom: none;
+    	}
+	.header-id, .header-join, .header-time {
+		margin-left: 8px;
+	}
+	.item-join, .header-join {
+	    	min-width: 146px;
+	}
+	.header-data,
+	.item-data {
+		flex-grow: 3;
+		display: flex;
+		flex-wrap: wrap;
+		text-align: center;
+	}
+	.item-data {
+	    	line-height: 84px;
+	}
+	.item-id {
+		width: 90px;
+	}
+	.header-id,
+	.header-time,
+	.header-join,
+	.item-id,
+	.item-time,
+	.item-join {
+		padding-left: 8px;
+		margin-left: 8px;
+		flex: 1 0 0;
+	}
+	.collection-table-header {
+		padding: 8px 24px;
+	}
+	.header-name,
+	.header-id,
+	.header-time,
+	.header-join,
+	.item-name,
+	.item-data,
+	.item-name img,
+	.item-name .name,
+	.item-id,
+	.item-time,
+	.item-join,
+	.chips {
+	    	float: left;
+	}
+	.item-name img {
+		width: 120px;
+	}
+	.item-name .name {
+		margin-left: 8px;
+		width: 240px;
+	}
+	.truncate {
+	  	width: 100%;
+	  	white-space: nowrap;
+	  	overflow: hidden;
+	  	text-overflow: ellipsis;
+	}
+	.item-name .english {
+		color: rgba(0,0,0,.87);
+		font-weight: 600;
+		font-size: 1.2rem;
+	}
+	.item-name .japanese {
+		color: rgba(0,0,0,.61);
+		font-size: 0.9rem;
+	}
+	.clear {
+		float: right;
+	}
+	.chips {
+		border-bottom: 1px solid rgba(0,0,0,.12);
+		width: 100%;
+	}
+
+/* If the text has multiple lines, add the following: */
+.center label {
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+}
+.switch {
+	margin-left: 24px;
+}
+	</style>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/materialize.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("header .settings, .card.settings .dismiss").click(function() {
+				$(".card.settings").toggle();
+			});
+			$("header .tools .search, .card.search .dismiss").click(function() {
+				$(".card.search").toggle();
+			});
+			$("header .tools .help, .card.help .dismiss").click(function() {
+				$(".card.help").toggle();
+			});
+
+			$(".dismissable .dismiss").click(function() {
+				$(this).parent(".dismissable").remove();
+			});
+		});
+	</script>
+</head>
+<body>
+	<header>
+		<div class="settings noselect"><i class="material-icons">settings</i></div>
+		<div class="tools">
+			<div class="search noselect"><i class="material-icons">search</i></div>
+			<div class="connection noselect"><i class="material-icons error">wifi</i></div>
+			<div class="help noselect"><i class="material-icons">help_outline</i></div>
+			<div class="donate"><a href="" class="btn"><i class="material-icons right">favorite</i>donate</a></div>
+		</div>
+	</header>
+	<main>
+		<div class="container">
+			<div class="card error dismissable">
+			<div class="content">
+				<div class="icon">
+					<i class="material-icons">error</i>
+				</div>
+				<div class="message">
+					<h2>Error connecting to server.</h2>
+					<p>Server could be temporarily down or in maintance, please wait.</p>
+				</div>
+			</div>
+			<div class="dismiss noselect">
+				<i class="material-icons">clear</i>
+			</div>
+		</div>
+		<div class="card message dismissable">
+			<div class="title"><p>News</p></div>
+			<div class="content">
+				<p>Some news.</p>
+			</div>
+			<div class="dismiss noselect">
+				<i class="material-icons">clear</i>
+			</div>
+		</div>
+		<div class="card help">
+			<div class="title"><p>Help</p></div>
+			<div class="content">
+				<h3>Notable Features</h3>
+				<ul>
+					<li>
+						<p><strong>Join Button:</strong> If you have the Viramate Chrome extension, have GBF running in another browser tab/window, have enabled the Web API setting in Viramate, and have reloaded the GBF page, the Join button will send you right to the support summon selection page for that raid provided that you meet the requirements for the raid and have enough BP.</p>
+					</li>
+					<li>
+						<p><strong>Click to Copy:</strong> Click on any part of a raid's row besides the Join button to copy the raid's ID for easy copying.</p>
+					</li>
+					<li>
+						<p><strong>Desktop Notifications:</strong> Click on a desktop notification to copy it's id or to join the raid if you have the Viramate integration setup.</p></p>
+					</li>
+				</ul>
+				<h3>Vertical Layout Options</h3>
+				<ul>
+					<li>
+						<p><strong>Single Row:</strong> The "Single Row" option will just keep adding new selected raids to a single row which means that you will have to scroll horizontally after a certain number.</p>
+					</li>
+					<li>
+						<p><strong>Stacking:</strong> The "Stacking" option will keep everything on the same page by putting new selected raids below the first couple like a grid. PLEASE NOTE: The "Stacking" option does not work in Chrome because Chrome has a bug that they haven't fixed yet. I will update the feature when they do fix it.</p>
+					</li>
+				</ul>
+				<h3>Support</h3>
+				<ul>
+					<li>
+						<p>If you want to browse the code of this site or are looking to host your own copy, head on over to the GitHub page for the site.</p>
+					</li>
+					<li>
+						<p>If you have any questions about the site, are experiencing issues, or want to suggest new features, send me a PM on Reddit.</p>
+					</li>
+					<li>
+						<p>If you don't want to use Reddit, send me an email at support@gbfraiders.com</p>
+					</li>
+				</ul>	
+			</div>
+			<div class="dismiss noselect">
+				<i class="material-icons">clear</i>
+			</div>
+		</div>
+		<div class="card search">
+			<div class="content">
+				<input type="text" placeholder="Search...">
+			</div>
+			<div class="dismiss noselect">
+				<i class="material-icons">clear</i>
+			</div>
+		</div>
+		<div class="card settings">
+			<div class="title"><p>Settings</p></div>
+			<div class="content">
+				<ul class="tabs">
+					<li class="tab"><a href="#global-toasts">Toasts</a></li>
+					<li class="tab"><a href="#global-sound">Sound</a></li>
+					<li class="tab"><a href="#global-theme">Theme</a></li>	
+				</ul>
+				<div class="tabs-content">
+					<div id="global-toasts" class="settings">
+						<div class="desktop-notifications-toggle setting center">
+							<label>Notifications</label>
+							<label class="switch">
+							  	<input type="checkbox">
+							  	<div class="slider round"></div>
+							</label>
+						</div>
+						<div class="desktop-notifications-toggle setting">
+							<label>Notification size</label>
+							<div class="selectfield">
+							        <label>Notification size</label>
+							        <select class="browser-default">
+							          <option value="" disabled selected>Choose your option</option>
+							          <option value="1">Small</option>
+							          <option value="2">Medium</option>
+							          <option value="3">Large</option>
+							        </select>
+							      </div>
+							
+						</div>
+					</div>
+					<div id="global-sound" class="setting">
+						<p>something</p>
+					</div>
+					<div id="global-theme" class="setting">
+						<p>something</p>
+					</div>
+				</div>
+				<div class="footer">
+					<div class="cancel">
+						<a class="btn-flat">cancel</a>
+					</div>
+					<div class="save">
+						<a class="btn-flat">save</a>
+					</div>	
+				</div>	
+			</div>
+			<div class="dismiss noselect">
+				<i class="material-icons">clear</i>
+			</div>
+		</div>
+		<div class="card raids">
+			<div class="title"><p>Raid list</p></div>
+			<div class="content">
+				<div class="toolbar">
+					<div class="clear noselect"><a class="btn-flat">clear list</a></div>
+					<div class="chips">
+						<div class="chip">
+							<img src="https://gbf.wiki/images/6/66/BattleRaid_Luminiera_Omega_Extreme.jpg">
+    							Lvl 75 Luminiera Omega
+    							<i class="close material-icons noselect">close</i>
+ 						 </div>
+ 						 <div class="chip">
+							<img src="https://gbf.wiki/images/6/66/BattleRaid_Luminiera_Omega_Extreme.jpg">
+    							Lvl 75 Luminiera Omega
+    							<i class="close material-icons noselect">close</i>
+ 						 </div>
+					</div>
+					
+				</div>
+				<div class="collection-table">
+		            			<div class="collection-table-header">
+		            				<div class="header-name"><p>Raid Name</p></div>
+		            				<div class="header-data">
+		            					<div class="header-id"><p>Raid ID</p></div>
+		            					<div class="header-time"><p>Time Tweeted</p></div>
+		            					<div class="header-join"><p>Join Raid</p></div>
+		            				</div>
+		            			</div>
+		            			<div class="collection-table-items">
+		            				<div class="collection-table-item">
+		            					<div class="item-name">
+		            						<img src="https://gbf.wiki/images/6/66/BattleRaid_Luminiera_Omega_Extreme.jpg">
+		            						<div class="name">
+		            							<p class="english truncate">Lvl 75 Luminiera Omega</p>
+		            							<p class="japanese truncate">Lv75 シュヴァリエ・マグナ</p>
+		            						</div>
+		            					</div>
+		            					<div class="item-data">
+		            						<div class="item-id"><p>6BA3A4B0</p></div>
+		            						<div class="item-time"><p>120 secs ago</p></div>
+		            						<div class="item-join"><a href="" class="btn"><i class="material-icons right">send</i>join</a></div>
+		            					</div>
+		            				</div>
+		            				<div class="collection-table-item">
+		            					<div class="item-name">
+		            						<img src="https://gbf.wiki/images/6/66/BattleRaid_Luminiera_Omega_Extreme.jpg">
+		            						<div class="name">
+		            							<p class="english truncate">Lvl 75 Luminiera Omega</p>
+		            							<p class="japanese truncate">Lv75 シュヴァリエ・マグナ</p>
+		            						</div>
+		            					</div>
+		            					<div class="item-data">
+		            						<div class="item-id"><p>6BA3A4B0</p></div>
+		            						<div class="item-time"><p>120 secs ago</p></div>
+		            						<div class="item-join"><a href="" class="btn"><i class="material-icons right">send</i>join</a></div>
+		            					</div>
+		            				</div>
+		            			</div>
+		            		</div>
+			</div>
+		</div>
+		</div>
+		
+	</main>
+</body>
+</html>

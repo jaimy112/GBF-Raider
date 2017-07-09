@@ -5,6 +5,7 @@
 	<title>Find some raids</title>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/light.css">
+	<link rel="stylesheet" type="text/css" href="css/flexboxgrid.css">
 </head>
 <body>
 	<header>
@@ -95,7 +96,7 @@
 					<i class="material-icons">clear</i>
 				</div>
 			</div>
-			<div class="card settings">
+			<div class="card global-settings">
 				<div class="title">
 					<p>Settings</p>
 				</div>
@@ -146,6 +147,14 @@
 										<option value="3">Large</option>
 									</select>
 								</div>
+							</div>
+							<div class="sound-volume setting">
+								<label>Volume</label>
+								<form action="#">
+									<p class="range-field">
+										<input type="range" id="test5" min="0" max="100" />
+									</p>
+								</form>
 							</div>
 						</div>
 						<div id="global-theme" class="settings">
@@ -240,6 +249,132 @@
 						</div>
 					</div>
 				</div>
+			</div>
+
+			<div class="vertical row">
+				<div class="raid col-xs-12 col-sm-6 col-lg-3">
+					<div class="card">
+						<div class="header">
+							<div class="image">
+								<div class="border">
+									<img src="https://gbf.wiki/images/6/66/BattleRaid_Luminiera_Omega_Extreme.jpg">
+								</div>
+							</div>
+							<div class="name">
+								<p class="english truncate">Lvl 75 Luminiera Omega</p>
+								<p class="japanese truncate">Lv75 シュヴァリエ・マグナ</p>
+							</div>
+							<div class="dismiss noselect">
+								<i class="material-icons">clear</i>
+							</div>
+							<div class="settings-toggle noselect">
+								<i class="material-icons">settings</i>
+							</div>
+						</div>
+						<div class="raid-settings">
+							<ul class="tabs">
+								<li class="tab"><a href="#raid-1-toasts">Toasts</a></li>
+								<li class="tab"><a href="#raid-1-sound">Sound</a></li>
+								<li class="tab"><a href="#raid-1-size">Sizing</a></li>
+							</ul>
+							<div class="tabs-content">
+								<div id="raid-1-toasts" class="settings">
+									<div class="desktop-notifications-toggle setting center">
+										<label>Notifications</label>
+										<label class="switch">
+											<input type="checkbox">
+											<div class="slider round"></div>
+										</label>
+									</div>
+									<div class="desktop-notifications-select setting">
+										<label>Notification size</label>
+										<div class="selectfield">
+											<label></label>
+											<select class="browser-default">
+												<option value="" disabled selected>Choose your option</option>
+												<option value="1">Small</option>
+												<option value="2">Medium</option>
+												<option value="3">Large</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div id="raid-1-sound" class="settings">
+									<div class="sound-notifications-toggle setting center">
+										<label>Sound Notifications</label>
+										<label class="switch">
+											<input type="checkbox">
+											<div class="slider round"></div>
+										</label>
+									</div>
+									<div class="sound-notifications-type setting">
+										<label>Sound Type</label>
+										<div class="selectfield">
+											<label></label>
+											<select class="browser-default">
+												<option value="" disabled selected>Choose your option</option>
+												<option value="1">Small</option>
+												<option value="2">Medium</option>
+												<option value="3">Large</option>
+											</select>
+										</div>
+									</div>
+									<div class="sound-volume setting">
+										<label>Volume</label>
+										<form action="#">
+										    	<p class="range-field">
+										      		<input type="range" id="test5" min="0" max="100" />
+										    	</p>
+										</form>
+									</div>
+								</div>
+								<div id="raid-1-size" class="settings">
+									<div class="raid-size-grid">
+										<label>Grid size</label>
+										<div class="selectfield">
+											<label></label>
+											<select class="browser-default">
+												<option value="" disabled selected>Choose your option</option>
+												<option value="1">Extra small</option>
+												<option value="2">Small</option>
+												<option value="3">Medium</option>
+												<option value="4">Large</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="footer">
+								<div class="cancel">
+									<a class="btn-flat">cancel</a>
+								</div>
+								<div class="save">
+									<a class="btn-flat">save</a>
+								</div>
+							</div>
+						</div>
+						<div class="data-table">
+							<div class="head">
+								<div class="id"><p>Raid ID</p></div>
+								<div class="time"><p>Time Tweeted</p></div>
+								<div class="join"><p>Join Raid</p></div>
+							</div>
+							<div class="list">
+								<div class="data">
+									<div class="id truncate"><p>12345678</p></div>
+									<div class="time truncate"><p>120 Secs ago</p></div>
+									<div class="join"><i class="material-icons noselect">send</i></div>
+								</div>
+								<div class="data">
+									<div class="id truncate"><p>12345678</p></div>
+									<div class="time truncate"><p>120 Secs ago</p></div>
+									<div class="join"><i class="material-icons noselect">send</i></div>
+								</div>
+							</div>
+						</div>						
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</main>

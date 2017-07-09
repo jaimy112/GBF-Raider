@@ -10,7 +10,7 @@ $(document).ready(function() {
     	});
 
     	$(".dismissable .dismiss").click(function() {
-        		$(this).parent(".dismissable").remove();
+        		$(this).parents(".dismissable").remove();
     	});
 
     	$(".raids .toolbar .clear").click(function() {

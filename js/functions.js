@@ -29,7 +29,7 @@ $(document).ready(function() {
 
 	$('.grid-item .header .settings-toggle').click(function() {
 		$(this).parents(".card").children(".raid-settings").toggle('blind', function() {
-			pckry.layout();
+			pckry.shiftLayout();
 		});
 	});
 

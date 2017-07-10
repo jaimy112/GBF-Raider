@@ -17,10 +17,6 @@ $(document).ready(function() {
 		$(".raids .collection-table-items .collection-table-item").remove();
 	});
 
-	$(".settings-toggle").click(function() {
-		$(this).parents(".card").children(".raid-settings").toggle("blind");
-	});
-
 	$('ul.tabs').tabs();
 	
 	var pckry = new Packery('.grid', {
@@ -29,6 +25,12 @@ $(document).ready(function() {
 		itemSelector: '.grid-item',
 		percentPosition: true
 		
+	});
+
+	$('.grid-item .header .settings-toggle').click(function() {
+		$(this).parents(".card").children(".raid-settings").toggle('blind', function() {
+			pckry.layout();
+		});
 	});
 
 	pckry.getItemElements().forEach(function(itemElem) {

@@ -1903,7 +1903,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #f5f5f5; }
+  background: #424242; }
 
 main {
   padding-top: 60px; }
@@ -2038,7 +2038,7 @@ ul.staggered-list li {
 
 .secondary-content {
   float: right;
-  color: #f5f5f5; }
+  color: #424242; }
 
 .collapsible .collection {
   margin: 0;
@@ -2671,7 +2671,7 @@ input[type=range] + .thumb {
 header {
   display: flex;
   flex-wrap: nowrap;
-  background-color: #FFFFFF;
+  background-color: #212121;
   position: fixed;
   width: 100%;
   z-index: 2; }
@@ -2680,7 +2680,7 @@ header {
   header .settings:hover,
   header .tools .search:hover,
   header .tools .help:hover {
-    color: rgba(0, 0, 0, 0.87);
+    color: rgba(255, 255, 255, 0.87);
     cursor: pointer; }
   header .settings i,
   header .tools i {
@@ -2734,7 +2734,7 @@ html {
   line-height: 1.5;
   font-family: "Roboto", sans-serif;
   font-weight: normal;
-  color: rgba(0, 0, 0, 0.74); }
+  color: rgba(255, 255, 255, 0.74); }
   @media only screen and (min-width: 0) {
     html {
       font-size: 14px; } }
@@ -2878,7 +2878,7 @@ small {
   position: relative;
   margin: 0.5rem 0 1rem 0;
   padding: 16px 24px;
-  background-color: #FFFFFF;
+  background-color: #212121;
   transition: box-shadow .25s;
   border-radius: 2px; }
   .card.error {
@@ -2903,12 +2903,12 @@ small {
     cursor: pointer;
     top: 8px;
     right: 8px;
-    color: rgba(0, 0, 0, 0.61); }
+    color: rgba(255, 255, 255, 0.61); }
     .card .dismiss:hover {
-      color: rgba(0, 0, 0, 0.87); }
+      color: rgba(255, 255, 255, 0.87); }
   .card .title {
     font-size: 24px;
-    color: rgba(0, 0, 0, 0.87);
+    color: rgba(255, 255, 255, 0.87);
     font-weight: 400; }
   .card .content:after {
     content: "";
@@ -2918,20 +2918,20 @@ small {
     display: flex;
     padding: 16px 0;
     margin-top: 16px;
-    border-top: 1px solid rgba(0, 0, 0, 0.12); }
+    border-top: 1px solid rgba(255, 255, 255, 0.12); }
     .card .content .footer .cancel {
       margin-left: auto; }
     .card .content .footer .save a {
-      color: #2196F3; }
+      color: #ff5722; }
   .card .raid-settings .footer {
     display: flex;
     padding: 16px 0;
     margin-top: 16px;
-    border-top: 1px solid rgba(0, 0, 0, 0.12); }
+    border-top: 1px solid rgba(255, 255, 255, 0.12); }
     .card .raid-settings .footer .cancel {
       margin-left: auto; }
     .card .raid-settings .footer .save a {
-      color: #2196F3; }
+      color: #ff5722; }
   .card .settings:after {
     content: "";
     display: table;
@@ -2940,10 +2940,10 @@ small {
     margin-top: 8px;
     float: left;
     width: 100%;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12); }
     .card .settings .setting label.title {
       font-size: 0.9rem;
-      color: rgba(0, 0, 0, 0.61); }
+      color: rgba(255, 255, 255, 0.61); }
     .card .settings .setting:last-child {
       border-bottom: none; }
   .card.small, .card.medium, .card.large {
@@ -3005,7 +3005,7 @@ small {
       bottom: 0;
       width: 100%; }
     .card .card-image .card-title {
-      color: #FFFFFF;
+      color: #212121;
       position: absolute;
       bottom: 0;
       left: 0;
@@ -3031,16 +3031,16 @@ small {
     .card .card-action:last-child {
       border-radius: 0 0 2px 2px; }
     .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
-      color: #2196F3;
+      color: #ff5722;
       margin-right: 24px;
       transition: color .3s ease;
       text-transform: uppercase; }
       .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover {
-        color: #82c4f8; }
+        color: #ffa588; }
   .card .card-reveal {
     padding: 24px;
     position: absolute;
-    background-color: #FFFFFF;
+    background-color: #212121;
     width: 100%;
     overflow-y: auto;
     left: 0;
@@ -3081,19 +3081,19 @@ small {
 
 .chips {
   border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: none;
   margin: 0 0 20px 0;
   min-height: 45px;
   outline: none;
   transition: all .3s; }
   .chips.focus {
-    border-bottom: 1px solid #2196F3;
-    box-shadow: 0 1px 0 0 #2196F3; }
+    border-bottom: 1px solid #ff5722;
+    box-shadow: 0 1px 0 0 #ff5722; }
   .chips:hover {
     cursor: text; }
   .chips .chip.selected {
-    background-color: #2196F3;
+    background-color: #ff5722;
     color: #fff; }
   .chips .input {
     background: none;
@@ -3127,7 +3127,7 @@ select:focus {
 
 button:focus {
   outline: none;
-  background-color: #349ff4; }
+  background-color: #ff6736; }
 
 label {
   font-size: 0.8rem;
@@ -3243,8 +3243,8 @@ textarea.materialize-textarea {
   input[type=number]:not(.browser-default):focus:not([readonly]),
   input[type=search]:not(.browser-default):focus:not([readonly]),
   textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: 1px solid #2196F3;
-    box-shadow: 0 1px 0 0 #2196F3; }
+    border-bottom: 1px solid #ff5722;
+    box-shadow: 0 1px 0 0 #ff5722; }
   input:not([type]):focus:not([readonly]) + label,
   input[type=text]:not(.browser-default):focus:not([readonly]) + label,
   input[type=password]:not(.browser-default):focus:not([readonly]) + label,
@@ -3258,7 +3258,7 @@ textarea.materialize-textarea {
   input[type=number]:not(.browser-default):focus:not([readonly]) + label,
   input[type=search]:not(.browser-default):focus:not([readonly]) + label,
   textarea.materialize-textarea:focus:not([readonly]) + label {
-    color: #2196F3; }
+    color: #ff5722; }
   input:not([type]).valid, input:not([type]):focus.valid,
   input[type=text]:not(.browser-default).valid,
   input[type=text]:not(.browser-default):focus.valid,
@@ -3438,7 +3438,7 @@ textarea.materialize-textarea {
     font-size: 2rem;
     transition: color .2s; }
     .input-field .prefix.active {
-      color: #2196F3; }
+      color: #ff5722; }
   .input-field .prefix ~ input,
   .input-field .prefix ~ textarea,
   .input-field .prefix ~ label,
@@ -3576,11 +3576,11 @@ textarea {
 [type="radio"]:checked + label:after,
 [type="radio"].with-gap:checked + label:before,
 [type="radio"].with-gap:checked + label:after {
-  border: 2px solid #2196F3; }
+  border: 2px solid #ff5722; }
 
 [type="radio"]:checked + label:after,
 [type="radio"].with-gap:checked + label:after {
-  background-color: #2196F3; }
+  background-color: #ff5722; }
 
 [type="radio"]:checked + label:after {
   transform: scale(1.02); }
@@ -3684,8 +3684,8 @@ form p:last-child {
   height: 22px;
   border-top: 2px solid transparent;
   border-left: 2px solid transparent;
-  border-right: 2px solid #2196F3;
-  border-bottom: 2px solid #2196F3;
+  border-right: 2px solid #ff5722;
+  border-bottom: 2px solid #ff5722;
   transform: rotate(40deg);
   backface-visibility: hidden;
   transform-origin: 100% 100%; }
@@ -3701,7 +3701,7 @@ form p:last-child {
   height: 22px;
   border-top: none;
   border-left: none;
-  border-right: 2px solid #2196F3;
+  border-right: 2px solid #ff5722;
   border-bottom: none;
   transform: rotate(90deg);
   backface-visibility: hidden;
@@ -3754,8 +3754,8 @@ form p:last-child {
   top: 0;
   width: 20px;
   height: 20px;
-  border: 2px solid #f5f5f5;
-  background-color: #f5f5f5;
+  border: 2px solid #424242;
+  background-color: #424242;
   z-index: 0; }
 [type="checkbox"].filled-in.tabbed:focus + label:after {
   border-radius: 2px;
@@ -3763,8 +3763,8 @@ form p:last-child {
   background-color: rgba(0, 0, 0, 0.1); }
 [type="checkbox"].filled-in.tabbed:checked:focus + label:after {
   border-radius: 2px;
-  background-color: #f5f5f5;
-  border-color: #f5f5f5; }
+  background-color: #424242;
+  border-color: #424242; }
 [type="checkbox"].filled-in:disabled:not(:checked) + label:before {
   background-color: transparent;
   border: 2px solid transparent; }
@@ -3795,11 +3795,11 @@ form p:last-child {
   width: 0;
   height: 0; }
   .switch label input[type=checkbox]:checked + .lever {
-    background-color: #a7ceec; }
+    background-color: #f3bead; }
     .switch label input[type=checkbox]:checked + .lever:before, .switch label input[type=checkbox]:checked + .lever:after {
       left: 18px; }
     .switch label input[type=checkbox]:checked + .lever:after {
-      background-color: #2196F3; }
+      background-color: #ff5722; }
 
 .switch label .lever {
   content: "";
@@ -3824,7 +3824,7 @@ form p:last-child {
     top: -3px;
     transition: left 0.3s ease, background .3s ease, box-shadow 0.1s ease, transform .1s ease; }
   .switch label .lever:before {
-    background-color: rgba(33, 150, 243, 0.15); }
+    background-color: rgba(255, 87, 34, 0.15); }
   .switch label .lever:after {
     background-color: #F1F1F1;
     box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12); }
@@ -3832,7 +3832,7 @@ form p:last-child {
 input[type=checkbox]:checked:not(:disabled) ~ .lever:active::before,
 input[type=checkbox]:checked:not(:disabled).tabbed:focus ~ .lever::before {
   transform: scale(2.4);
-  background-color: rgba(33, 150, 243, 0.15); }
+  background-color: rgba(255, 87, 34, 0.15); }
 
 input[type=checkbox]:not(:disabled) ~ .lever:active:before,
 input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::before {
@@ -3860,7 +3860,7 @@ select {
   width: 100%;
   padding: 5px;
   border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.61);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.61);
   border-radius: 2px;
   height: 3rem; }
 
@@ -4003,7 +4003,7 @@ input[type=range] + .thumb {
   height: 0;
   width: 0;
   border-radius: 50%;
-  background-color: #2196F3;
+  background-color: #ff5722;
   margin-left: 7px;
   transform-origin: 50% 50%;
   transform: rotate(-45deg); }
@@ -4011,7 +4011,7 @@ input[type=range] + .thumb {
     display: block;
     width: 30px;
     text-align: center;
-    color: #2196F3;
+    color: #ff5722;
     font-size: 0;
     transform: rotate(45deg); }
   input[type=range] + .thumb.active {
@@ -4036,7 +4036,7 @@ input[type=range]::-webkit-slider-thumb {
   height: 14px;
   width: 14px;
   border-radius: 50%;
-  background-color: #2196F3;
+  background-color: #ff5722;
   transform-origin: 50% 50%;
   margin: -5px 0 0 0;
   transition: .3s; }
@@ -4059,7 +4059,7 @@ input[type=range]::-moz-range-thumb {
   height: 14px;
   width: 14px;
   border-radius: 50%;
-  background: #2196F3;
+  background: #ff5722;
   margin-top: -5px; }
 
 input[type=range]:-moz-focusring {
@@ -4088,7 +4088,7 @@ input[type=range]::-ms-thumb {
   height: 14px;
   width: 14px;
   border-radius: 50%;
-  background: #2196F3; }
+  background: #ff5722; }
 
 input[type=range]:focus::-ms-fill-lower {
   background: #888; }
@@ -4105,7 +4105,7 @@ input[type=range]:focus::-ms-fill-upper {
   background-color: transparent;
   margin: 0 auto;
   white-space: nowrap;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12); }
   .tabs.tabs-transparent {
     background-color: transparent; }
     .tabs.tabs-transparent .tab a,
@@ -4133,7 +4133,7 @@ input[type=range]:focus::-ms-fill-upper {
     margin: 0;
     text-transform: uppercase; }
     .tabs .tab a {
-      color: rgba(0, 0, 0, 0.61);
+      color: rgba(255, 255, 255, 0.61);
       display: block;
       width: 100%;
       height: 100%;
@@ -4144,15 +4144,15 @@ input[type=range]:focus::-ms-fill-upper {
       transition: color .28s ease; }
       .tabs .tab a:hover, .tabs .tab a.active {
         background-color: transparent;
-        color: #2196F3; }
+        color: #ff5722; }
     .tabs .tab.disabled a, .tabs .tab.disabled a:hover {
-      color: rgba(0, 0, 0, 0.7);
+      color: rgba(255, 255, 255, 0.7);
       cursor: default; }
   .tabs .indicator {
     position: absolute;
     bottom: 0;
     height: 2px;
-    background-color: #2196F3;
+    background-color: #ff5722;
     will-change: left, right; }
 
 @media only screen and (max-width: 992px) {
@@ -4228,18 +4228,18 @@ input[type=range]:focus::-ms-fill-upper {
 
 .btn:focus, .btn-large:focus,
 .btn-floating:focus {
-  background-color: #0c7cd5; }
+  background-color: #ee3900; }
 
 .btn, .btn-large {
   text-decoration: none;
   color: #fff;
-  background-color: #2196F3;
+  background-color: #ff5722;
   text-align: center;
   letter-spacing: .5px;
   transition: .2s ease-out;
   cursor: pointer; }
   .btn:hover, .btn-large:hover {
-    background-color: #39a1f4; }
+    background-color: #ff6a3c; }
 
 .btn-floating {
   display: inline-block;
@@ -4251,13 +4251,13 @@ input[type=range]:focus::-ms-fill-upper {
   height: 40px;
   line-height: 40px;
   padding: 0;
-  background-color: #2196F3;
+  background-color: #ff5722;
   border-radius: 50%;
   transition: .3s;
   cursor: pointer;
   vertical-align: middle; }
   .btn-floating:hover {
-    background-color: #2196F3; }
+    background-color: #ff5722; }
   .btn-floating:before {
     border-radius: 0; }
   .btn-floating.btn-large {
@@ -4356,14 +4356,14 @@ button.btn-floating {
     z-index: -1;
     width: 40px;
     height: 40px;
-    background-color: #2196F3;
+    background-color: #ff5722;
     border-radius: 50%;
     transform: scale(0); }
 
 .btn-flat {
   box-shadow: none;
   background-color: transparent;
-  color: rgba(0, 0, 0, 0.61);
+  color: rgba(255, 255, 255, 0.61);
   cursor: pointer;
   transition: background-color .2s; }
   .btn-flat:focus, .btn-flat:hover {
@@ -4430,7 +4430,7 @@ button.btn-floating {
     display: flex;
     font-weight: 600;
     padding: 8px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12); }
     .raids .collection-table .collection-table-header .header-name {
       flex-basis: 35%; }
     .raids .collection-table .collection-table-header .header-id {
@@ -4447,13 +4447,13 @@ button.btn-floating {
       flex-basis: 100%;
       flex-wrap: nowrap;
       min-width: 0;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12); }
       .raids .collection-table .collection-table-items .collection-table-item:nth-child(even) {
-        background-color: rgba(245, 245, 245, 0.8);
+        background-color: rgba(66, 66, 66, 0.8);
         border-bottom: none; }
       .raids .collection-table .collection-table-items .collection-table-item:hover {
-        background-color: rgba(245, 245, 245, 0.5);
-        color: rgba(0, 0, 0, 0.87); }
+        background-color: rgba(66, 66, 66, 0.5);
+        color: rgba(255, 255, 255, 0.87); }
       .raids .collection-table .collection-table-items .collection-table-item .item-image {
         flex-basis: 10%; }
         .raids .collection-table .collection-table-items .collection-table-item .item-image img {
@@ -4504,7 +4504,7 @@ button.btn-floating {
     top: 40px;
     right: 8px; }
   .vertical .raid .card .header {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     height: 75px;
     overflow: hidden; }
     .vertical .raid .card .header .image {
@@ -4531,10 +4531,10 @@ button.btn-floating {
         font-size: 1.1rem; }
       .vertical .raid .card .header .name .japanese {
         font-size: 0.9rem;
-        color: rgba(0, 0, 0, 0.61); }
+        color: rgba(255, 255, 255, 0.61); }
   .vertical .raid .card .data-table .head {
     font-weight: 600;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     display: flex;
     width: 100%;
     text-align: center;
@@ -4557,11 +4557,11 @@ button.btn-floating {
       display: flex;
       text-align: center;
       width: 100%;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
       padding: 8px 8px 8px 24px;
       height: 45px; }
       .vertical .raid .card .data-table .list .data:nth-child(even) {
-        background-color: #f5f5f5; }
+        background-color: #424242; }
       .vertical .raid .card .data-table .list .data .id {
         flex-basis: 25%;
         line-height: 28px; }
@@ -4572,11 +4572,11 @@ button.btn-floating {
         flex-basis: 40%;
         line-height: 28px; }
     .vertical .raid .card .data-table .list .join {
-      color: #2196F3;
+      color: #ff5722;
       cursor: pointer; }
   .vertical .raid .card .raid-settings {
-    background-color: #f5f5f5;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    background-color: #424242;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     display: none; }
     .vertical .raid .card .raid-settings .tabs-content {
       padding: 8px 24px; }
@@ -4589,4 +4589,4 @@ button.btn-floating {
 .vertical .raid.xlarge {
   width: 100%; }
 
-/*# sourceMappingURL=light.css.map */
+/*# sourceMappingURL=dark.css.map */

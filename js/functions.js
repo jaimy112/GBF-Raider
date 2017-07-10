@@ -1,12 +1,12 @@
 $(document).ready(function() {
 	$("header .settings, .card.global-settings .dismiss").click(function() {
-		$(".card.global-settings").toggle();
+		$(".card.global-settings").toggle("drop");
 	});
 	$("header .tools .search, .card.search .dismiss").click(function() {
-		$(".card.search").toggle();
+		$(".card.search").toggle("drop");
 	});
 	$("header .tools .help, .card.help .dismiss").click(function() {
-		$(".card.help").toggle();
+		$(".card.help").toggle("drop");
 	});
 
 	$(".dismissable .dismiss").click(function() {
@@ -21,6 +21,8 @@ $(document).ready(function() {
 		$(this).parents(".card").children(".raid-settings").toggle();
 	});
 
+	$('ul.tabs').tabs();
+	
 	var pckry = new Packery('.grid', {
 		itemSelector: '.grid-item',
 		percentPosition: true,
@@ -32,4 +34,11 @@ $(document).ready(function() {
 		var draggie = new Draggabilly(itemElem);
 		pckry.bindDraggabillyEvents(draggie);
 	});
+
+	$('.tooltipped').tooltip({
+	    	delay: 50,
+	    	position: bottom
+
+	 });
+     
 });

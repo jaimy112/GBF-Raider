@@ -1,0 +1,236 @@
+// Horizontal layout
+
+.raids {
+	.toolbar {
+	    	.clear {
+	    		margin-left: auto;
+	    	}
+	    	.chips {
+	    		flex-basis: 100%;
+	    		max-height: 70px;
+	    		overflow-y: auto;
+	    		margin: 0;
+	    	}
+	    	display: flex;
+	    	flex-wrap: wrap;
+	}
+	.collection-table {
+		.collection-table-header {
+			.header-name {
+				flex-basis: 35%;
+			}
+			.header-id {
+				flex-basis: 15%;
+			}
+			.header-time {
+				flex-basis: 25%;
+			}
+			.header-join {
+				flex-basis: 25%;
+			}
+			display: flex;
+			font-weight: 600;
+			padding: 8px 0;
+			border-bottom: 1px solid $primary-border-color;
+		}
+		.collection-table-items {
+			.collection-table-item {
+				&:nth-child(even) {
+					background-color: rgba($secondary-color, .8);
+					border-bottom: none;
+				}
+				&:hover {
+					background-color: rgba($secondary-color, .5);
+					color: $header-font-color;
+				}
+				.item-image {
+					img {
+						width: 100%;
+					}
+					flex-basis: 10%;
+				}
+				.item-name {
+					.english {
+						font-size: 1.1rem;
+						font-weight: 500;
+						min-width: 0;
+					}
+					.japanese {
+						font-size: 0.9rem;
+						font-weight: 300;
+						min-width: 0;
+					}
+					flex-basis: 25%;
+				    	text-align: left;
+				    	padding: 8px;
+				    	display: flex;
+				    	flex-direction: column;
+				    	justify-content: center;
+				    	overflow: hidden;
+				}
+				.item-id {
+					flex-basis: 15%;
+				    	text-align: center;
+				    	padding: 8px;
+				    	display: flex;
+				    	flex-direction: column;
+				    	justify-content: center;
+				}
+				.item-time {
+					flex-basis: 25%;
+				    	text-align: center;
+				    	padding: 8px;
+				    	display: flex;
+				    	flex-direction: column;
+				    	justify-content: center;
+				}
+				.item-join {
+					flex-basis: 25%;
+				    	text-align: center;
+				    	padding: 8px;
+				    	display: flex;
+				    	flex-direction: column;
+				    	justify-content: center;
+				}
+				display: flex;
+				flex-basis: 100%;
+				flex-wrap: nowrap;
+				min-width: 0;
+				border-bottom: 1px solid $primary-border-color;
+			}
+			display: flex;
+			flex-wrap: wrap;
+		}
+		text-align: center;
+	}
+}
+
+
+// Vertical layout
+
+.vertical {
+	.raid {
+		.card {
+			.settings-toggle {
+				position: absolute;
+				cursor: pointer;
+				top: 40px;
+				right: 8px;
+			}
+			.header {
+				.image {
+					.border {
+					    	height: 75px;
+					    	width: 25%;
+					   	position: relative;
+					}
+					img {
+					    	height: 100%;
+					    	max-height: 75px;
+					    	position: absolute;
+					}
+				    	width: 25%;
+				    	max-width: 120px;
+				    	float: left;
+				   	overflow: auto;
+				    	position: relative;
+				}
+				.name {
+					.english{
+						font-weight: 600;
+						font-size: 1.1rem;
+					}
+					.japanese {
+						font-size: 0.9rem;
+						color: $sub-font-color;
+					}
+				    	float: left;
+				    	width: 75%;
+				    	box-sizing: border-box;
+				    	padding: 16px 40px 0 8px;
+				}
+				border-bottom: 1px solid $primary-border-color;
+				height: 75px;
+				overflow: hidden;	
+			}
+			.data-table {
+				.head {
+					.id {
+						flex-basis: 25%;
+						line-height: 28px;
+					}
+					.time {
+						flex-basis: 35%;
+						line-height: 28px;
+					}
+					.join {
+						flex-basis: 40%;
+						line-height: 28px;
+					}
+					font-weight: 600;
+					border-bottom: 1px solid $primary-border-color;
+					display: flex;
+					width: 100%;
+					text-align: center;
+					padding: 8px 24px;
+					font-size: 0.9rem;
+				}
+				.list {
+					.data{
+						&:nth-child(even) {
+							background-color: $secondary-color;
+						}
+						.id {
+							flex-basis: 25%;
+							line-height: 28px;
+						}
+						.time {
+							flex-basis: 35%;
+							line-height: 28px;
+						}
+						.join {
+							flex-basis: 40%;
+							line-height: 28px;
+						}
+						display: flex;
+						text-align: center;
+						width: 100%;
+						border-bottom: 1px solid $primary-border-color;
+						padding: 8px 8px 8px 24px;
+						height: 45px;
+					}
+					.join {
+						color: $accent-color;
+						cursor: pointer;
+					}
+					height: 225px;
+					overflow-y: scroll;
+					font-size: 0.8rem;
+				}
+			}
+			.raid-settings {
+				.tabs-content {
+				    	padding: 8px 24px;
+				}
+				background-color: $secondary-color;
+				border-bottom: 1px solid $primary-border-color;
+				display: none;
+			}
+			padding: 0;
+		}
+
+		&.small {
+			width: 23.5%;
+		}
+		&.medium {
+			width: 32%;
+		}
+		&.large {
+			width: 46%;
+		}
+		&.xlarge {
+			width: 100%;
+		}
+	}
+	
+}

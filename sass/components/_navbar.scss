@@ -1,0 +1,63 @@
+/* Navbar
+   ========================================================================== */
+
+header {
+  	display: flex;
+  	flex-wrap: nowrap;
+  	background-color: $primary-color;
+  	position: fixed;
+  	width: 100%;
+  	z-index: 2;
+  	@extend .z-depth-1;
+
+	.settings {
+	  margin-left: 8px;
+	}
+
+	.settings:hover,
+	.tools .search:hover,
+	.tools .help:hover {
+	  color: $header-font-color;
+	  cursor: pointer;
+	}
+
+	.settings i,
+	.tools i {
+	  font-size: 36px;
+	}
+
+	.tools {
+	  margin-left: auto;
+	  display: flex;
+	  flex-wrap: wrap;
+	}
+
+	.tools .connection {
+	  margin-left: 8px;
+
+	  i {
+	  	color: color("green", "base");
+	  }
+	}
+
+	.tools .help {
+	  margin-left: 8px;
+	}
+
+	.tools .donate {
+	  margin-left: 8px;
+	  margin-right: 8px;
+	}
+
+	.settings,
+	.tools .search,
+	.tools .connection,
+	.tools .help,
+	.tools .donate {
+	  padding: 8px 16px;
+	}
+
+	.tools .btn i {
+	  font-size: 1.3rem;
+	}
+}

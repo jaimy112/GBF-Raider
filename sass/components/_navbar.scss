@@ -61,3 +61,21 @@ header {
 	  font-size: 1.3rem;
 	}
 }
+
+@media #{$small-and-down} {
+	header {
+		.settings {
+			i {
+				font-size: 24px;
+			}
+		}
+		.tools {
+			i {
+				font-size: 24px;
+			}
+			.donate {
+				display: none;
+			}
+		}
+	}
+}

@@ -18,20 +18,23 @@ $(document).ready(function() {
 	});
 
 	$(".settings-toggle").click(function() {
-		$(this).parents(".card").children(".raid-settings").toggle();
+		$(this).parents(".card").children(".raid-settings").toggle("blind");
 	});
 
 	$('ul.tabs').tabs();
 	
 	var pckry = new Packery('.grid', {
+		columnWidth: '.grid-sizer',
+		gutter: '.gutter-sizer',
 		itemSelector: '.grid-item',
-		percentPosition: true,
-		columnWidth: 25,
-		rowHeight: 25
+		percentPosition: true
+		
 	});
 
 	pckry.getItemElements().forEach(function(itemElem) {
-		var draggie = new Draggabilly(itemElem);
+		var draggie = new Draggabilly(itemElem, {
+			handle: '.handle'
+		});
 		pckry.bindDraggabillyEvents(draggie);
 	});
 

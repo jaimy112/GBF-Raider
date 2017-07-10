@@ -2,10 +2,10 @@
 <html>
 
 <head>
+	<meta charset="UTF-8">
 	<title>Find some raids</title>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/light.css">
-	<link rel="stylesheet" type="text/css" href="css/flexboxgrid.css">
+	<link rel="stylesheet" type="text/css" href="css/light.min.css">
 </head>
 
 <body>
@@ -27,7 +27,7 @@
 					</div>
 					<div class="message">
 						<p class="title truncate">Error connecting to server.</p>
-						<p class="truncate">Server could be temporarily down or in maintance, please wait.</p>
+						<p>Server could be temporarily down or in maintance, please wait.</p>
 					</div>
 				</div>
 				<div class="dismiss no-select">
@@ -271,9 +271,11 @@
 			</div>
 		</div>
 		<div class="vertical grid">
+			<div class="grid-sizer"></div>
+  			<div class="gutter-sizer"></div>
 			<div class="raid dismissable grid-item small">
 				<div class="card">
-					<div class="header">
+					<div class="header handle no-select">
 						<div class="image">
 							<div class="border">
 								<img src="https://gbf.wiki/images/6/66/BattleRaid_Luminiera_Omega_Extreme.jpg">
@@ -383,31 +385,31 @@
 					<div class="data-table">
 						<div class="head">
 							<div class="id">
-								<p>Raid ID</p>
+								<p class="truncate">Raid ID</p>
 							</div>
 							<div class="time">
-								<p>Time Tweeted</p>
+								<p class="truncate">Time Tweeted</p>
 							</div>
 							<div class="join">
-								<p>Join Raid</p>
+								<p class="truncate">Join Raid</p>
 							</div>
 						</div>
 						<div class="list">
 							<div class="data">
-								<div class="id truncate">
-									<p>12345678</p>
+								<div class="id">
+									<p class="truncate">12345678</p>
 								</div>
-								<div class="time truncate">
-									<p>120 Secs ago</p>
+								<div class="time">
+									<p class="truncate">120 Secs ago</p>
 								</div>
 								<div class="join"><i class="material-icons no-select">send</i></div>
 							</div>
 							<div class="data">
-								<div class="id truncate">
-									<p>12345678</p>
+								<div class="id">
+									<p class="truncate">12345678</p>
 								</div>
-								<div class="time truncate">
-									<p>120 Secs ago</p>
+								<div class="time">
+									<p class="truncate">120 Secs ago</p>
 								</div>
 								<div class="join"><i class="material-icons no-select">send</i></div>
 							</div>
@@ -417,7 +419,7 @@
 			</div>
 			<div class="raid dismissable grid-item medium">
 				<div class="card">
-					<div class="header">
+					<div class="header handle no-select">
 						<div class="image">
 							<div class="border">
 								<img src="https://gbf.wiki/images/6/66/BattleRaid_Luminiera_Omega_Extreme.jpg">
@@ -527,31 +529,31 @@
 					<div class="data-table">
 						<div class="head">
 							<div class="id">
-								<p>Raid ID</p>
+								<p class="truncate">Raid ID</p>
 							</div>
 							<div class="time">
-								<p>Time Tweeted</p>
+								<p class="truncate">Time Tweeted</p>
 							</div>
 							<div class="join">
-								<p>Join Raid</p>
+								<p class="truncate">Join Raid</p>
 							</div>
 						</div>
 						<div class="list">
 							<div class="data">
-								<div class="id truncate">
-									<p>12345678</p>
+								<div class="id">
+									<p class="truncate">12345678</p>
 								</div>
-								<div class="time truncate">
-									<p>120 Secs ago</p>
+								<div class="time">
+									<p class="truncate">120 Secs ago</p>
 								</div>
 								<div class="join"><i class="material-icons no-select">send</i></div>
 							</div>
 							<div class="data">
-								<div class="id truncate">
-									<p>12345678</p>
+								<div class="id">
+									<p class="truncate">12345678</p>
 								</div>
-								<div class="time truncate">
-									<p>120 Secs ago</p>
+								<div class="time">
+									<p class="truncate">120 Secs ago</p>
 								</div>
 								<div class="join"><i class="material-icons no-select">send</i></div>
 							</div>
@@ -561,7 +563,7 @@
 			</div>
 			<div class="raid dismissable grid-item large">
 				<div class="card">
-					<div class="header">
+					<div class="header handle no-select">
 						<div class="image">
 							<div class="border">
 								<img src="https://gbf.wiki/images/6/66/BattleRaid_Luminiera_Omega_Extreme.jpg">
@@ -671,31 +673,31 @@
 					<div class="data-table">
 						<div class="head">
 							<div class="id">
-								<p>Raid ID</p>
+								<p class="truncate">Raid ID</p>
 							</div>
 							<div class="time">
-								<p>Time Tweeted</p>
+								<p class="truncate">Time Tweeted</p>
 							</div>
 							<div class="join">
-								<p>Join Raid</p>
+								<p class="truncate">Join Raid</p>
 							</div>
 						</div>
 						<div class="list">
 							<div class="data">
-								<div class="id truncate">
-									<p>12345678</p>
+								<div class="id">
+									<p class="truncate">12345678</p>
 								</div>
-								<div class="time truncate">
-									<p>120 Secs ago</p>
+								<div class="time">
+									<p class="truncate">120 Secs ago</p>
 								</div>
 								<div class="join"><i class="material-icons no-select">send</i></div>
 							</div>
 							<div class="data">
-								<div class="id truncate">
-									<p>12345678</p>
+								<div class="id">
+									<p class="truncate">12345678</p>
 								</div>
-								<div class="time truncate">
-									<p>120 Secs ago</p>
+								<div class="time">
+									<p class="truncate">120 Secs ago</p>
 								</div>
 								<div class="join"><i class="material-icons no-select">send</i></div>
 							</div>
@@ -705,7 +707,7 @@
 			</div>
 			<div class="raid dismissable grid-item xlarge">
 				<div class="card">
-					<div class="header">
+					<div class="header handle no-select">
 						<div class="image">
 							<div class="border">
 								<img src="https://gbf.wiki/images/6/66/BattleRaid_Luminiera_Omega_Extreme.jpg">
@@ -815,31 +817,31 @@
 					<div class="data-table">
 						<div class="head">
 							<div class="id">
-								<p>Raid ID</p>
+								<p class="truncate">Raid ID</p>
 							</div>
 							<div class="time">
-								<p>Time Tweeted</p>
+								<p class="truncate">Time Tweeted</p>
 							</div>
 							<div class="join">
-								<p>Join Raid</p>
+								<p class="truncate">Join Raid</p>
 							</div>
 						</div>
 						<div class="list">
 							<div class="data">
-								<div class="id truncate">
-									<p>12345678</p>
+								<div class="id">
+									<p class="truncate">12345678</p>
 								</div>
-								<div class="time truncate">
-									<p>120 Secs ago</p>
+								<div class="time">
+									<p class="truncate">120 Secs ago</p>
 								</div>
 								<div class="join"><i class="material-icons no-select">send</i></div>
 							</div>
 							<div class="data">
-								<div class="id truncate">
-									<p>12345678</p>
+								<div class="id">
+									<p class="truncate">12345678</p>
 								</div>
-								<div class="time truncate">
-									<p>120 Secs ago</p>
+								<div class="time">
+									<p class="truncate">120 Secs ago</p>
 								</div>
 								<div class="join"><i class="material-icons no-select">send</i></div>
 							</div>
@@ -852,8 +854,8 @@
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/materialize.min.js"></script>
-	<script src="https://unpkg.com/packery@2/dist/packery.pkgd.js"></script>
-	<script src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js"></script>
+	<script src="js/packery.min.js"></script>
+	<script src="js/draggabilly.min.js"></script>
 	<script src="js/functions.js"></script>
 </body>
 

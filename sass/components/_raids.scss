@@ -109,77 +109,456 @@
 // Vertical layout
 
 .vertical {
-	.raid {
-		.card {
-			.settings-toggle {
-				position: absolute;
-				cursor: pointer;
-				top: 40px;
-				right: 8px;
-			}
-			.header {
-				.image {
-					.border {
-					    	height: 75px;
-					    	width: 25%;
-					   	position: relative;
-					}
-					img {
-					    	height: 100%;
-					    	max-height: 75px;
-					    	position: absolute;
-					}
-				    	width: 25%;
-				    	max-width: 120px;
-				    	float: left;
-				   	overflow: auto;
-				    	position: relative;
+	@media #{$small-and-down} {
+		.raid {
+			.card {
+				.settings-toggle {
+					position: absolute;
+					cursor: pointer;
+					top: 40px;
+					right: 8px;
 				}
-				.name {
-					.english{
-						font-weight: 600;
-						font-size: 1.1rem;
-					}
-					.japanese {
-						font-size: 0.9rem;
-						color: $sub-font-color;
-					}
-				    	float: left;
-				    	width: 75%;
-				    	box-sizing: border-box;
-				    	padding: 16px 40px 0 8px;
-				}
-				border-bottom: 1px solid $primary-border-color;
-				height: 75px;
-				overflow: hidden;	
-			}
-			.data-table {
-				.head {
-					.id {
-						flex-basis: 25%;
-						line-height: 28px;
-					}
-					.time {
-						flex-basis: 35%;
-						line-height: 28px;
-					}
-					.join {
-						flex-basis: 40%;
-						line-height: 28px;
-					}
-					font-weight: 600;
-					border-bottom: 1px solid $primary-border-color;
-					display: flex;
-					width: 100%;
-					text-align: center;
-					padding: 8px 24px;
-					font-size: 0.9rem;
-				}
-				.list {
-					.data{
-						&:nth-child(even) {
-							background-color: $secondary-color;
+				.header {
+					.image {
+						.border {
+						    	height: 75px;
+						    	width: 25%;
+						   	position: relative;
 						}
+						img {
+						    	height: 100%;
+						    	max-height: 75px;
+						    	position: absolute;
+						}
+					    	width: 25%;
+					    	max-width: 120px;
+					    	float: left;
+					   	overflow: auto;
+					    	position: relative;
+					}
+					.name {
+						.english{
+							font-weight: 600;
+							font-size: 1.1rem;
+						}
+						.japanese {
+							font-size: 0.9rem;
+							color: $sub-font-color;
+						}
+					    	float: left;
+					    	width: 75%;
+					    	box-sizing: border-box;
+					    	padding: 16px 40px 0 8px;
+					}
+					border-bottom: 1px solid $primary-border-color;
+					height: 75px;
+					overflow: hidden;	
+				}
+				.data-table {
+					.head {
+						.id {
+							flex-basis: 35%;
+							overflow: hidden;
+						}
+						.time {
+							flex-basis: 25%;
+							overflow: hidden;
+						}
+						.join {
+							flex-basis: 40%;
+							overflow: hidden;
+						}
+						font-weight: 600;
+						border-bottom: 1px solid $primary-border-color;
+						display: flex;
+						width: 100%;
+						text-align: center;
+						padding: 8px 16px;
+						font-size: 0.9rem;
+					}
+					.list {
+						.data{
+							&:nth-child(even) {
+								background-color: $secondary-color;
+							}
+							.id {
+								flex-basis: 35%;
+								overflow: hidden;
+								display: flex;
+								flex-direction: column;
+								justify-content: center;
+							}
+							.time {
+								flex-basis: 25%;
+								overflow: hidden;
+								display: flex;
+								flex-direction: column;
+								justify-content: center;
+							}
+							.join {
+								flex-basis: 40%;
+								overflow: hidden;
+								display: flex;
+								flex-direction: column;
+								justify-content: center;
+							}
+							display: flex;
+							text-align: center;
+							width: 100%;
+							border-bottom: 1px solid $primary-border-color;
+							padding: 8px 0px 8px 16px;
+							height: 45px;
+						}
+						.join {
+							color: $accent-color;
+							cursor: pointer;
+						}
+						height: 225px;
+						overflow-y: scroll;
+						font-size: 0.8rem;
+					}
+				}
+				.raid-settings {
+					.tabs-content {
+					    	padding: 8px 24px;
+					}
+					background-color: $secondary-color;
+					border-bottom: 1px solid $primary-border-color;
+					display: none;
+				}
+				padding: 0;
+				margin: .65%;
+			}
+			&.small {
+				width: 100%;
+			}
+			&.medium {
+				width: 100%;
+			}
+			&.large {
+				width: 100%;
+			}
+			&.xlarge {
+				width: 100%;
+			}
+		}
+	}
+
+	@media #{$medium-only} {
+		.raid {
+			.card {
+				.settings-toggle {
+					position: absolute;
+					cursor: pointer;
+					top: 40px;
+					right: 8px;
+				}
+				.header {
+					.image {
+						.border {
+						    	height: 75px;
+						    	width: 25%;
+						   	position: relative;
+						}
+						img {
+						    	height: 100%;
+						    	max-height: 75px;
+						    	position: absolute;
+						}
+					    	width: 25%;
+					    	max-width: 120px;
+					    	float: left;
+					   	overflow: auto;
+					    	position: relative;
+					}
+					.name {
+						.english{
+							font-weight: 600;
+							font-size: 1.1rem;
+						}
+						.japanese {
+							font-size: 0.9rem;
+							color: $sub-font-color;
+						}
+					    	float: left;
+					    	width: 75%;
+					    	box-sizing: border-box;
+					    	padding: 16px 40px 0 8px;
+					}
+					border-bottom: 1px solid $primary-border-color;
+					height: 75px;
+					overflow: hidden;	
+				}
+				.data-table {
+					.head {
+						.id {
+							flex-basis: 25%;
+							overflow: hidden;
+						}
+						.time {
+							flex-basis: 35%;
+							overflow: hidden;
+						}
+						.join {
+							flex-basis: 40%;
+							overflow: hidden;
+						}
+						font-weight: 600;
+						border-bottom: 1px solid $primary-border-color;
+						display: flex;
+						width: 100%;
+						text-align: center;
+						padding: 8px 16px;
+						font-size: 0.9rem;
+					}
+					.list {
+						.data{
+							&:nth-child(even) {
+								background-color: $secondary-color;
+							}
+							.id {
+								flex-basis: 25%;
+								overflow: hidden;
+								display: flex;
+								flex-direction: column;
+								justify-content: center;
+							}
+							.time {
+								flex-basis: 35%;
+								overflow: hidden;
+								display: flex;
+								flex-direction: column;
+								justify-content: center;
+							}
+							.join {
+								flex-basis: 40%;
+								overflow: hidden;
+								display: flex;
+								flex-direction: column;
+								justify-content: center;
+							}
+							display: flex;
+							text-align: center;
+							width: 100%;
+							border-bottom: 1px solid $primary-border-color;
+							padding: 8px 0px 8px 16px;
+							height: 45px;
+						}
+						.join {
+							color: $accent-color;
+							cursor: pointer;
+						}
+						height: 225px;
+						overflow-y: scroll;
+						font-size: 0.8rem;
+					}
+				}
+				.raid-settings {
+					.tabs-content {
+					    	padding: 8px 24px;
+					}
+					background-color: $secondary-color;
+					border-bottom: 1px solid $primary-border-color;
+					display: none;
+				}
+				padding: 0;
+				margin: .65%;
+			}
+
+			&.small {
+				width: 49.35%;
+			}
+			&.medium {
+				width: 49.35%;
+			}
+			&.large {
+				width: 49.35%;
+			}
+			&.xlarge {
+				width: 100%;
+			}
+		}
+	}
+
+	@media #{$large-and-up} {
+		.raid {
+			.card {
+				.settings-toggle {
+					position: absolute;
+					cursor: pointer;
+					top: 40px;
+					right: 8px;
+				}
+				.header {
+					.image {
+						.border {
+						    	height: 75px;
+						    	width: 25%;
+						   	position: relative;
+						}
+						img {
+						    	height: 100%;
+						    	max-height: 75px;
+						    	position: absolute;
+						}
+					    	width: 25%;
+					    	max-width: 120px;
+					    	float: left;
+					   	overflow: auto;
+					    	position: relative;
+					}
+					.name {
+						.english{
+							font-weight: 600;
+							font-size: 1.1rem;
+						}
+						.japanese {
+							font-size: 0.9rem;
+							color: $sub-font-color;
+						}
+					    	float: left;
+					    	width: 75%;
+					    	box-sizing: border-box;
+					    	padding: 16px 40px 0 8px;
+					}
+					border-bottom: 1px solid $primary-border-color;
+					height: 75px;
+					overflow: hidden;	
+				}
+				.data-table {
+					.head {
+						.id {
+							flex-basis: 25%;
+						}
+						.time {
+							flex-basis: 35%;
+						}
+						.join {
+							flex-basis: 40%;
+						}
+						font-weight: 600;
+						border-bottom: 1px solid $primary-border-color;
+						display: flex;
+						width: 100%;
+						text-align: center;
+						padding: 8px 24px;
+						font-size: 0.9rem;
+					}
+					.list {
+						.data{
+							&:nth-child(even) {
+								background-color: $secondary-color;
+							}
+							.id {
+								flex-basis: 25%;
+								overflow: hidden;
+								display: flex;
+								flex-direction: column;
+								justify-content: center;
+							}
+							.time {
+								flex-basis: 35%;
+								overflow: hidden;
+								display: flex;
+								flex-direction: column;
+								justify-content: center;
+							}
+							.join {
+								flex-basis: 40%;
+								overflow: hidden;
+								display: flex;
+								flex-direction: column;
+								justify-content: center;
+							}
+							display: flex;
+							text-align: center;
+							width: 100%;
+							border-bottom: 1px solid $primary-border-color;
+							padding: 8px 8px 8px 24px;
+							height: 45px;
+						}
+						.join {
+							color: $accent-color;
+							cursor: pointer;
+						}
+						height: 225px;
+						overflow-y: scroll;
+						font-size: 0.8rem;
+					}
+				}
+				.raid-settings {
+					.tabs-content {
+					    	padding: 8px 24px;
+					}
+					background-color: $secondary-color;
+					border-bottom: 1px solid $primary-border-color;
+					display: none;
+				}
+				padding: 0;
+				margin: .65%;
+			}
+
+			&.small {
+				width: 32.46%;
+			}
+			&.medium {
+				width: 32.46%;
+			}
+			&.large {
+				width: 49.35%;
+			}
+			&.xlarge {
+				width: 100%;
+			}
+		}
+	}
+	@media #{$extra-large-and-up} {
+		.raid {
+			.card {
+				.settings-toggle {
+					position: absolute;
+					cursor: pointer;
+					top: 40px;
+					right: 8px;
+				}
+				.header {
+					.image {
+						.border {
+						    	height: 75px;
+						    	width: 25%;
+						   	position: relative;
+						}
+						img {
+						    	height: 100%;
+						    	max-height: 75px;
+						    	position: absolute;
+						}
+					    	width: 25%;
+					    	max-width: 120px;
+					    	float: left;
+					   	overflow: auto;
+					    	position: relative;
+					}
+					.name {
+						.english{
+							font-weight: 600;
+							font-size: 1.1rem;
+						}
+						.japanese {
+							font-size: 0.9rem;
+							color: $sub-font-color;
+						}
+					    	float: left;
+					    	width: 75%;
+					    	box-sizing: border-box;
+					    	padding: 16px 40px 0 8px;
+					}
+					border-bottom: 1px solid $primary-border-color;
+					height: 75px;
+					overflow: hidden;	
+				}
+				.data-table {
+					.head {
 						.id {
 							flex-basis: 25%;
 							line-height: 28px;
@@ -192,45 +571,80 @@
 							flex-basis: 40%;
 							line-height: 28px;
 						}
-						display: flex;
-						text-align: center;
-						width: 100%;
+						font-weight: 600;
 						border-bottom: 1px solid $primary-border-color;
-						padding: 8px 8px 8px 24px;
-						height: 45px;
+						display: flex;
+						width: 100%;
+						text-align: center;
+						padding: 8px 24px;
+						font-size: 0.9rem;
 					}
-					.join {
-						color: $accent-color;
-						cursor: pointer;
+					.list {
+						.data{
+							&:nth-child(even) {
+								background-color: $secondary-color;
+							}
+							.id {
+								flex-basis: 25%;
+								overflow: hidden;
+								display: flex;
+								flex-direction: column;
+								justify-content: center;
+							}
+							.time {
+								flex-basis: 35%;
+								overflow: hidden;
+								display: flex;
+								flex-direction: column;
+								justify-content: center;
+							}
+							.join {
+								flex-basis: 40%;
+								overflow: hidden;
+								display: flex;
+								flex-direction: column;
+								justify-content: center;
+							}
+							display: flex;
+							text-align: center;
+							width: 100%;
+							border-bottom: 1px solid $primary-border-color;
+							padding: 8px 8px 8px 24px;
+							height: 45px;
+						}
+						.join {
+							color: $accent-color;
+							cursor: pointer;
+						}
+						height: 225px;
+						overflow-y: scroll;
+						font-size: 0.8rem;
 					}
-					height: 225px;
-					overflow-y: scroll;
-					font-size: 0.8rem;
 				}
-			}
-			.raid-settings {
-				.tabs-content {
-				    	padding: 8px 24px;
+				.raid-settings {
+					.tabs-content {
+					    	padding: 8px 24px;
+					}
+					background-color: $secondary-color;
+					border-bottom: 1px solid $primary-border-color;
+					display: none;
 				}
-				background-color: $secondary-color;
-				border-bottom: 1px solid $primary-border-color;
-				display: none;
+				padding: 0;
+				margin: .65%;
 			}
-			padding: 0;
-		}
 
-		&.small {
-			width: 23.5%;
-		}
-		&.medium {
-			width: 32%;
-		}
-		&.large {
-			width: 46%;
-		}
-		&.xlarge {
-			width: 100%;
+			&.small {
+				width: 24.02%;
+			}
+			&.medium {
+				width: 32.46%;
+			}
+			&.large {
+				width: 49.35%;
+			}
+			&.xlarge {
+				width: 100%;
+			}
 		}
 	}
-	
 }

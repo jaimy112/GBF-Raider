@@ -6,6 +6,11 @@
 	width: 90%;
 	margin: 0 auto;
 }
+@media #{$small-and-down} {
+	.vertical {
+		width: 100%;
+	}
+}
 @media #{$medium-and-up} {
 	.container {
 		width: 90%;
